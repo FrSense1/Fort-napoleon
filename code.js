@@ -105,8 +105,8 @@ function POI5Click()  {
     window.alert("Le bouton 5 fonctionne") 
 }
 
-//permet a la vidéo de se lancer automatiquement
-document.querySelector("#video").autoplay = true;
+// permet a la vidéo de se lancer automatiquement
+// document.querySelector("#video").autoplay = true;
 
 
 //ajout d'une fonction de detection des appareils mobile (test)
