@@ -12,7 +12,6 @@ h4 {
 } 
 
 video {
-    width: fit-content;
-    height: fit-content;
-    max-height: 700 px;
+    max-width: 420;
+    max-height: 747;
 }

@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arbutus&display=swap" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" /> <!-- video player source https://www.videojs.com -->
 </head>
 
 <body>
@@ -21,12 +22,20 @@
 
     <main>
         <h4>Carte avec point d'intérets</h4>
-        <video src="timeline.mp4" id="video" ></video>
+        <video id="my-video" class="video-js"
+        controls preload="auto"
+        width="400" height="864" poster="TempLogo.png" data-setup="{}">
+        <source src="timeline.mp4" type="video/mp4" />
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
     
     <footer>
 
     </footer>
-    
+    <!-- Script pour le viewer vidéo -->
+    <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
     <script src="codevideo.js"></script>
 </body>
 </html>
