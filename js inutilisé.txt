@@ -1,0 +1,23 @@
+
+ var latLngBounds = L.latLngBounds([[43.095019, 5.892233], [43.093358, 5.894653]]);
+ var imageUrL = `MapUwU.jpg`;
+ var errorOverlayUrl = 'https://cdn-icons-png.flaticon.com/512/110/110686.png';
+ var altText = "Carte des trajet"
+
+ var imageOverlayTest = L.imageOverlay(imageUrL, latLngBounds, {
+     opacity: 0.25,
+     errorOverlayUrl: errorOverlayUrl,
+     alt: altText,
+     interactive: true,
+ }).addTo(map)
+
+//option temporaire, créant une pop-up affichant les coordonées cliqués
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+map.on('click', onMapClick);
+
+UwU
