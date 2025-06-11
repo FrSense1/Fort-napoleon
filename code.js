@@ -81,8 +81,8 @@ POIbutton[0].addEventListener("click", POI1Click)
 
 function POI1Click()  {
 //  window.alert("Le bouton 1 fonctionne") 
-    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100`;
-    open('timeline.mp3', 'test', params);
+    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=900,left=100,top=100`;
+    open('video1.html', 'test', params);
 }
 POIbutton[1].addEventListener("click", POI2Click)
 
@@ -104,3 +104,6 @@ POIbutton[4].addEventListener("click", POI5Click)
 function POI5Click()  {
     window.alert("Le bouton 5 fonctionne") 
 }
+
+//permet a la vidéo de se lancer automatiquement
+document.querySelector("#video").autoplay = true;
