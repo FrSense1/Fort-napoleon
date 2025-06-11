@@ -74,9 +74,31 @@ function onMapClick(e) {
 }
 map.on('click', onMapClick);
 
-//option temporaire, permettant de tester mes boutons
-// POIbutton[0].addEventListener("click", POI1Click)
+//Je setup des boutons pour activer mes vidéos, même sans etre sur place, ou en cas ou la localisation ne fonctionne pas
+//window.alert est une option temporaire, permettant de tester mes boutons
 
-// function POI1Click()  {
-//     console.log("UwU") 
-// }
+POIbutton[0].addEventListener("click", POI1Click)
+
+function POI1Click()  {
+    window.alert("Le bouton 1 fonctionne") 
+}
+POIbutton[1].addEventListener("click", POI2Click)
+
+function POI2Click()  {
+    window.alert("Le bouton 2 fonctionne") 
+}
+POIbutton[2].addEventListener("click", POI3Click)
+
+function POI3Click()  {
+    window.alert("Le bouton 3 fonctionne") 
+}
+POIbutton[3].addEventListener("click", POI4Click)
+
+function POI4Click()  {
+    window.alert("Le bouton 4 fonctionne") 
+}
+POIbutton[4].addEventListener("click", POI5Click)
+
+function POI5Click()  {
+    window.alert("Le bouton 5 fonctionne") 
+}
