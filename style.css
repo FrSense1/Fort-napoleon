@@ -7,11 +7,26 @@ img {
 h4 {
     text-align: center;
     font-family: "Anton", sans-serif;
+    color: #C0EFBF;
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
 } 
+p{
+    color: #C0EFBF;
+    font-family: "Anton", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+}
+
 button {
-    color: #000000;
+    text-align: center;
+    background-color: #C0EFBF;
+    color: #6E4D2E;
+
 } 
 
+body {
+    background-color: #6E4D2E;
+}
