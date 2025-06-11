@@ -122,9 +122,14 @@ h4.addEventListener("click", testUwU)
 import Bowser from 'bowser';
 
 const parser = Bowser.getParser(navigator.userAgent);
+
+function device(){
 if (parser.getPlatformType() === 'mobile') {
-  console.log("Bonjour Mr Errante :3");
+  console.log("Bonjour Mr Errante :3")
 } 
 else {
     window.alert("L'interface a été créé avec les utilisateurs mobile en tête, désolé si ce n'est pas plaisant sur ordinateur ou tablette.");
 }
+}
+
+onload(device)
