@@ -39,7 +39,7 @@ function onLocationFound(e) {
     L.marker(e.latlng).addTo(map)
         .bindPopup("You are here").openPopup();
 
-    L.circle(e.latlng, radius/8).addTo(map);
+    L.circle(e.latlng, radius/2).addTo(map);
 }
 
 map.on('locationfound', onLocationFound);
