@@ -80,7 +80,9 @@ map.on('click', onMapClick);
 POIbutton[0].addEventListener("click", POI1Click)
 
 function POI1Click()  {
-    window.alert("Le bouton 1 fonctionne") 
+//  window.alert("Le bouton 1 fonctionne") 
+    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100`;
+    open('/', 'test', params);
 }
 POIbutton[1].addEventListener("click", POI2Click)
 
