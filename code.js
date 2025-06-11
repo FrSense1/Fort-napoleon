@@ -107,3 +107,17 @@ function POI5Click()  {
 
 //permet a la vidéo de se lancer automatiquement
 document.querySelector("#video").autoplay = true;
+
+
+//ajout d'une fonction de detection des appareils mobile (test)
+
+function isMobile() {
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+  console.log("Mobile device detected");
+} else {
+  console.log("Desktop device detected");
+}
