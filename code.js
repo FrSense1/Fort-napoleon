@@ -116,8 +116,13 @@ function isMobile() {
   return regex.test(navigator.userAgent);
 }
 
+h4.addEventListener("click", testUwU)
+
+function testUwU() {
 if (isMobile()) {
   console.log("Mobile device detected");
-} else {
+} 
+else {
   console.log("Desktop device detected");
 }
+    }
