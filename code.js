@@ -116,20 +116,15 @@ function isMobile() {
   return regex.test(navigator.userAgent);
 }
 
-h4.addEventListener("click", testUwU)
-
-
-import Bowser from 'bowser';
-
-const parser = Bowser.getParser(navigator.userAgent);
+h4.addEventListener("onload", device)
 
 function device(){
-if (parser.getPlatformType() === 'mobile') {
+if (isMobile() === 'mobile') {
   console.log("Bonjour Mr Errante :3")
 } 
 else {
-    window.alert("L'interface a été créé avec les utilisateurs mobile en tête, désolé si ce n'est pas plaisant sur ordinateur ou tablette.");
+    window.alert("L'interface a été créé avec les utilisateurs mobile en tête, ce n'est pas plaisant sur ordinateur ou tablette. Merci de votre compréhension.");
 }
-}
+};
 
 onload(device)

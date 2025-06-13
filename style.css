@@ -14,7 +14,14 @@ h4 {
     font-style: normal;
     font-size: 30px;
 } 
-p{
+.p.special{
+    color: #C0EFBF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+}
+#POI{
     color: #C0EFBF;
     font-family: "Anton", sans-serif;
     font-weight: 200;
