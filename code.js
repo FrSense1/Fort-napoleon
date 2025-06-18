@@ -5,7 +5,7 @@ const POIbutton2 = document.querySelector(".poi2")
 const POIbutton3 = document.querySelector(".poi3")
 const POIbutton4 = document.querySelector(".poi4")
 const POIbutton5 = document.querySelector(".poi5")
-const BackButton = document.querySelector(".BackToButton")
+
 const video = document.querySelector("#poi_video")
 var popup = L.popup()
 
@@ -62,21 +62,23 @@ const template = `
 ` 
 
 const TemplateButton = `
+        <div id="list">
             <button class="poi1">1: Histoire du fort</button> <br>
             <button class="poi2">2: Un emplacement stratégique</button> <br>
             <button class="poi3">3: Les murailles et glacis</button> <br>
             <button class="poi4">4: Un point de fuite</button> <br>
-            <button class="poi5">5:La vue sur la mer</button> <br>`
+            <button class="poi5">5:La vue sur la mer</button> <br>
+        </div>`
 
 const TemplateVideo1 = `<div id="poi_video">
         
-        <button class="BackToButton">Retour</button>
+        <button id="BackButton">Retour</button>
 
         <h4>Histoire du fort</h4>
 
         <video id="my-video" class="video-js"
         controls preload="auto"
-        width="400" height="864" poster="TempLogo.png" data-setup="{}">
+        width="400" height="864" poster="miniature.jpg" data-setup="{}">
         <source src="timeline.mp4" type="video/mp4" />
         
         <p class="vjs-no-js">
@@ -102,7 +104,6 @@ POIbutton1.addEventListener("click", POI1Click)
 function POI1Click()  {
     list.insertAdjacentHTML("afterend", TemplateVideo1)
     list.remove()
-    
 }
 POIbutton2.addEventListener("click", POI2Click)
 
@@ -129,11 +130,13 @@ function POI5Click()  {
     list.remove() 
 }
 
-BackButton.addEventListener("click", back)
+BackButton.addEventListener("click", Please)
 
-function back() {
-    video.insertAdjacentHTML("afterend", TemplateButton)
-    video.remove()
+function Please() {
+    console.log("test")
+    video.insertAdjacentHTML("beforebegin", TemplateButton)
+    video.remove
+    
 }
 
 //ajout d'une fonction de detection des appareils mobile (test)
