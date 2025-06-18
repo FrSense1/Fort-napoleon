@@ -1,7 +1,12 @@
-const POI = document.querySelector("#POI")
 const h4 = document.querySelector("h4")
 const list = document.querySelector("#list")
-const POIbutton = document.querySelectorAll("button")
+const POIbutton1 = document.querySelector(".poi1")
+const POIbutton2 = document.querySelector(".poi2")
+const POIbutton3 = document.querySelector(".poi3")
+const POIbutton4 = document.querySelector(".poi4")
+const POIbutton5 = document.querySelector(".poi5")
+const BackButton = document.querySelector(".BackToButton")
+const video = document.querySelector("#poi_video")
 var popup = L.popup()
 
 //je crée la map et défini son zoom et son point de départ
@@ -56,12 +61,6 @@ const template = `
     <br>
 ` 
 
-//je créer un "stalker", qui déploiera la liste des point d'intéret au chargement
-addEventListener("load", () => {
-        list.insertAdjacentHTML("afterend", template)
-})
-
-
 const TemplateButton = `
             <button class="poi1">1: Histoire du fort</button> <br>
             <button class="poi2">2: Un emplacement stratégique</button> <br>
@@ -69,14 +68,21 @@ const TemplateButton = `
             <button class="poi4">4: Un point de fuite</button> <br>
             <button class="poi5">5:La vue sur la mer</button> <br>`
 
-const TemplateVideo1 = `<h4>Histoire du fort</h4>
+const TemplateVideo1 = `<div id="poi_video">
+        
+        <button class="BackToButton">Retour</button>
+
+        <h4>Histoire du fort</h4>
+
         <video id="my-video" class="video-js"
         controls preload="auto"
         width="400" height="864" poster="TempLogo.png" data-setup="{}">
         <source src="timeline.mp4" type="video/mp4" />
+        
         <p class="vjs-no-js">
-        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        <button class="BackToButton"></button>
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        
+        </div>
 `
 
 //option temporaire, créant une pop-up affichant les coordonées cliqués
@@ -90,38 +96,45 @@ const TemplateVideo1 = `<h4>Histoire du fort</h4>
 // map.on('click', onMapClick);
 
 //Je setup des boutons pour activer mes vidéos, même sans etre sur place, ou en cas ou la localisation ne fonctionne pas
-//window.alert est une option temporaire, permettant de tester mes boutons
 
-POIbutton[0].addEventListener("click", POI1Click)
+POIbutton1.addEventListener("click", POI1Click)
 
 function POI1Click()  {
-//  window.alert("Le bouton 1 fonctionne") 
+    list.insertAdjacentHTML("afterend", TemplateVideo1)
+    list.remove()
     
 }
-POIbutton[1].addEventListener("click", POI2Click)
+POIbutton2.addEventListener("click", POI2Click)
 
 function POI2Click()  {
-    window.alert("Le bouton 2 fonctionne") 
+    list.insertAdjacentHTML("afterend", TemplateVideo1)
+    list.remove()
 }
-POIbutton[2].addEventListener("click", POI3Click)
+POIbutton3.addEventListener("click", POI3Click)
 
 function POI3Click()  {
-    window.alert("Le bouton 3 fonctionne") 
+    list.insertAdjacentHTML("afterend", TemplateVideo1)
+    list.remove() 
 }
-POIbutton[3].addEventListener("click", POI4Click)
+POIbutton4.addEventListener("click", POI4Click)
 
 function POI4Click()  {
-    window.alert("Le bouton 4 fonctionne") 
+    list.insertAdjacentHTML("afterend", TemplateVideo1)
+    list.remove() 
 }
-POIbutton[4].addEventListener("click", POI5Click)
+POIbutton5.addEventListener("click", POI5Click)
 
 function POI5Click()  {
-    window.alert("Le bouton 5 fonctionne") 
+    list.insertAdjacentHTML("afterend", TemplateVideo1)
+    list.remove() 
 }
 
-// permet a la vidéo de se lancer automatiquement
-// document.querySelector("#video").autoplay = true;
+BackButton.addEventListener("click", back)
 
+function back() {
+    video.insertAdjacentHTML("afterend", TemplateButton)
+    video.remove()
+}
 
 //ajout d'une fonction de detection des appareils mobile (test)
 
@@ -135,8 +148,9 @@ if (isMobile() === 'mobile') {
   console.log("Bonjour Mr Errante :3")
 } 
 else {
-    window.alert("L'interface a été créé avec les utilisateurs mobile en tête, ce n'est pas plaisant sur ordinateur ou tablette. Merci de votre compréhension.");
+    alert("L'interface a été créé avec les utilisateurs mobile en tête, ce n'est pas plaisant sur ordinateur ou tablette. Merci de votre compréhension.");
 }
 };
 
-onload(device)
+//permet a la vidéo de se lancer automatiquement
+document.querySelector("#video").autoplay = true;
