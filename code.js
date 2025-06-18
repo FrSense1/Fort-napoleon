@@ -72,13 +72,13 @@ const TemplateButton = `
 
 const TemplateVideo1 = `<div id="poi_video">
         
-        <button id="BackButton">Retour</button>
+        <button id="TheButton">Retour</button>
 
         <h4>Histoire du fort</h4>
 
         <video id="my-video" class="video-js"
         controls preload="auto"
-        width="400" height="864" poster="miniature.jpg" data-setup="{}">
+        width="380" height="676" poster="miniature.jpg" data-setup="{}">
         <source src="timeline.mp4" type="video/mp4" />
         
         <p class="vjs-no-js">
@@ -104,6 +104,7 @@ POIbutton1.addEventListener("click", POI1Click)
 function POI1Click()  {
     list.insertAdjacentHTML("afterend", TemplateVideo1)
     list.remove()
+    
 }
 POIbutton2.addEventListener("click", POI2Click)
 
@@ -130,7 +131,7 @@ function POI5Click()  {
     list.remove() 
 }
 
-BackButton.addEventListener("click", Please)
+document.querySelector("#TheButton").addEventListener("click", Please)
 
 function Please() {
     console.log("test")
