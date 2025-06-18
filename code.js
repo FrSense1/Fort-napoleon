@@ -62,17 +62,32 @@ addEventListener("load", () => {
 })
 
 
+const TemplateButton = `
+            <button class="poi1">1: Histoire du fort</button> <br>
+            <button class="poi2">2: Un emplacement stratégique</button> <br>
+            <button class="poi3">3: Les murailles et glacis</button> <br>
+            <button class="poi4">4: Un point de fuite</button> <br>
+            <button class="poi5">5:La vue sur la mer</button> <br>`
 
-
+const TemplateVideo1 = `<h4>Histoire du fort</h4>
+        <video id="my-video" class="video-js"
+        controls preload="auto"
+        width="400" height="864" poster="TempLogo.png" data-setup="{}">
+        <source src="timeline.mp4" type="video/mp4" />
+        <p class="vjs-no-js">
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        <button class="BackToButton"></button>
+`
 
 //option temporaire, créant une pop-up affichant les coordonées cliqués
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
-map.on('click', onMapClick);
+
+// function onMapClick(e) {
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent("You clicked the map at " + e.latlng.toString())
+//         .openOn(map);
+// }
+// map.on('click', onMapClick);
 
 //Je setup des boutons pour activer mes vidéos, même sans etre sur place, ou en cas ou la localisation ne fonctionne pas
 //window.alert est une option temporaire, permettant de tester mes boutons
@@ -81,8 +96,7 @@ POIbutton[0].addEventListener("click", POI1Click)
 
 function POI1Click()  {
 //  window.alert("Le bouton 1 fonctionne") 
-    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=900,left=100,top=100`;
-    open('video1.html', 'test', params);
+    
 }
 POIbutton[1].addEventListener("click", POI2Click)
 
@@ -115,8 +129,6 @@ function isMobile() {
   const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
   return regex.test(navigator.userAgent);
 }
-
-h4.addEventListener("onload", device)
 
 function device(){
 if (isMobile() === 'mobile') {

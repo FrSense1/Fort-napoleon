@@ -1,7 +1,7 @@
 #map { height: 315px; max-width: 1000px;}
 
 img {
-    max-height: 120px;
+    max-height: 90px;
 }
 body {
     background-color: #6E4D2E;
@@ -35,6 +35,7 @@ button {
     color: #6E4D2E;
     border-radius: 10px;
     padding: 10px 10px;
-
+    min-width: 350px;
+    font-size: 22px;
 } 
 
